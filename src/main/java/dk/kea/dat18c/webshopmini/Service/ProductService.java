@@ -1,8 +1,8 @@
-package dk.kea.dat18c.webshop.Service;
+package dk.kea.dat18c.webshopmini.Service;
 
-import dk.kea.dat18c.webshop.Model.Product;
+import dk.kea.dat18c.webshopmini.Model.Product;
 
-import dk.kea.dat18c.webshop.Repository.ProductRepository;
+import dk.kea.dat18c.webshopmini.Repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

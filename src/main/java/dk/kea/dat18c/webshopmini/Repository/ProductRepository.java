@@ -1,8 +1,7 @@
-package dk.kea.dat18c.webshop.Repository;
+package dk.kea.dat18c.webshopmini.Repository;
 
-import dk.kea.dat18c.webshop.Model.Product;
+import dk.kea.dat18c.webshopmini.Model.Product;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
 
 
 public interface ProductRepository extends CrudRepository<Product, Integer>

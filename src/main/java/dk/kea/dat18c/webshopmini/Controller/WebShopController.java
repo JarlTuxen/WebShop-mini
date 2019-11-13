@@ -1,7 +1,7 @@
-package dk.kea.dat18c.webshop.Controller;
+package dk.kea.dat18c.webshopmini.Controller;
 
-import dk.kea.dat18c.webshop.Model.Product;
-import dk.kea.dat18c.webshop.Service.ProductService;
+import dk.kea.dat18c.webshopmini.Model.Product;
+import dk.kea.dat18c.webshopmini.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
