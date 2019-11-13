@@ -18,12 +18,18 @@ public class WebShopController {
     ProductService productService;
 
     @GetMapping("/")
-    public String index(Model model)
+    public String index()
+    {
+        return "index";
+    }
+
+    @GetMapping("/list")
+    public String liste(Model model)
     {
         //put noget i model
         model.addAttribute("products", productService.getAll());
         //return side, der skal vises
-        return "index";
+        return "list";
     }
 
     @GetMapping("/create")
@@ -36,15 +42,15 @@ public class WebShopController {
     public String createProduct(@ModelAttribute Product product)
     {
         productService.create(product);
-        //bed browser om at navigere til index-siden efter oprettelse
-        return "redirect:/";
+        //bed browser om at navigere til liste-siden efter oprettelse
+        return "redirect:/list";
     }
 
     @GetMapping("/delete/{ident}")
     public String deleteProduct(@PathVariable("ident") int id)
     {
         productService.delete(id);
-        return "redirect:/";
+        return "redirect:/list";
     }
 
     // få fat id fra stien vha. @PathVariable
@@ -61,7 +67,7 @@ public class WebShopController {
         //kald update service
         productService.update(product);
         //sikr mod refresh fejl og sletter igen
-        return "redirect:/";
+        return "redirect:/list";
     }
 
 }

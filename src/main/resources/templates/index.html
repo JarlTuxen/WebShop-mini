@@ -6,29 +6,9 @@
 </head>
 <body>
 
-<h1>Vareliste</h1>
-<!-- varetabel -->
-<table>
-    <thead>
-        <tr>
-            <th>Varenavn</th>
-            <th>Pris</th>
-            <th>Beskrivelse</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr th:each="product : ${products}">
-            <td th:text="${product.name}">kaffe</td>
-            <td th:text="${product.price}">35</td>
-            <td th:text="${product.description}">lækker kaffe</td>
-            <td><a th:href="@{'/update/' + ${product.id}}">opdater</a></td>
-            <td><a th:href="@{'/delete/' + ${product.id}}">slet</a></td>
-        </tr>
-    </tbody>
-
-</table>
-
-<a href="create">Opret product</a>
+<h1>Webshop med spændende varer</h1>
+Der er mange spændende varer i butikken.
+Klik videre for at se <a href="liste">det fulde varekatalog</a>.
 
 </body>
 </html>
