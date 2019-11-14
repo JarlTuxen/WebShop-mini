@@ -1,0 +1,16 @@
+version: "2"
+services:
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=qJiw03K2zwJD
+      - MYSQL_DATABASE=webshop
+    ports:
+      - 4000:3306
+  web:
+    image: jarltuxen/webshopmini
+    depends_on:
+      - db
+    ports:
+      - 9090:9090
+
