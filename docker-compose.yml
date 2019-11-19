@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
   db:
     image: mysql
@@ -7,8 +7,14 @@ services:
       - MYSQL_DATABASE=webshop
     ports:
       - 4000:3306
+    expose:
+      - 3306
+    volumes:
+      - "/Users/jart/tmp:/var/lib/mysql"
+
   web:
     image: jarltuxen/webshopmini
+    restart: on-failure
     depends_on:
       - db
     ports:
